@@ -1,0 +1,52 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="ducatiInspections">
+
+	<aura:attribute name="region" type="string" default=""/>
+	<aura:attribute name="dealers" type="object[]" />
+
+	<force:recordData aura:id="frd" mode="EDIT" targetFields="{!v.targetFields}" layoutType="FULL" />
+	<aura:attribute name="targetFields" type="Object"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<!--icons at https://www.lightningdesignsystem.com/icons/ -->
+	<lightning:card title="Event Details" variant="base">
+		<aura:set attribute="actions">
+			<!--actions go here, mostly buttons!-->
+		</aura:set>
+		<aura:set attribute="footer">
+			<!--footer markup-->
+		</aura:set>
+		<div class="slds-p-horizontal_medium">
+			<lightning:select label="Region" value="{!v.targetFields.Region}">
+				<option value="West">US West</option>
+				<option value="North">US North</option>
+				<option value="South">US South</option>
+				<option value="Northeast">US Northeast</option>
+				<option value="Northeast">Canada East</option>
+				<option value="Northeast">Canada West</option>
+			</lightning:select>
+
+			<aura:if isTrue="{!v.targetFields.Region}">
+				<lightning:select label="Region" value="{!v.targetFields.Dealer__c}">
+					<option value="">Select</option>
+					<aura:iteration items="{!v.dealers}" var="dealer">
+						<option value="{!dealer.Id}">{!dealer.Name}</option>
+					</aura:iteration>
+				</lightning:select>
+			</aura:if>
+
+			<lightning:select label="Event Type" value="{!v.Event_Type__c}" >
+				<option value="">Demo Day</option>
+				<option value="">VIP</option>
+			</lightning:select>
+
+			<lightning:select label="Attendee Segment" value="{!v.targetFields.Attendee_Segment__c}" >
+				<option value="">Ducati Owners</option>
+				<option value="">Non-Ducati Owners</option>
+			</lightning:select>
+
+			<lightning:input value="{!v.targetFields.Event_Date__c}" type="date" label="Event Date"/>
+
+			<!--then put your body here, outside any aura:set-->
+		</div>
+	</lightning:card>
+</aura:component>
