@@ -14,9 +14,12 @@ sfdx force:data:tree:import -f data/Dealer__c.json
 sfdx force:data:tree:import -f data/motorcycle__c.json
 sfdx force:data:tree:import -f data/Lead.json
 
-# creatng users
-
+# creating a user to chatter to
+sfdx force:user:create -f data/userDef/jason-user-def.json
 # chatter photos
+sfdx msm:user:photo -f assets/JasonChonnock.jpeg -g Jason -l Chinnock
+sfdx msm:user:photo -f assets/stefania.jpeg -g User -l User
 
-#sfdx force:apex:execute -f scrips/setup.cls
+sfdx force:apex:execute -f scrips/setup.cls
+
 sfdx force:org:open
