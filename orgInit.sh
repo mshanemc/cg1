@@ -20,6 +20,6 @@ sfdx force:user:create -f data/userDef/jason-user-def.json
 sfdx msm:user:photo -f assets/JasonChonnock.jpeg -g Jason -l Chinnock
 sfdx msm:user:photo -f assets/stefania.jpeg -g User -l User
 
-sfdx force:apex:execute -f scrips/setup.cls
+sfdx force:apex:execute -f scripts/setup.cls
 
 sfdx force:org:open
