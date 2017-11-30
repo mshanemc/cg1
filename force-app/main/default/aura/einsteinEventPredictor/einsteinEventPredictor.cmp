@@ -1,0 +1,32 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+		<aura:attribute name="attendance" type="decimal" default="98"/>
+		<aura:attribute name="unitSales" type="decimal" default="6"/>
+		<aura:attribute name="revenue" type="decimal" default="78000"/>
+
+
+		<ltng:require scripts="{!$Resource.lodash}" afterScriptsLoaded="{!c.doInit}"/>
+		<aura:handler event="ltng:sendMessage" action="{!c.shuffle}"/>
+
+		<lightning:card title="Event Forecast" iconName="standard:dashboard" variant="base">
+			<div class="slds-p-horizontal_medium">
+				<lightning:layout horizontalAlign="space">
+					<lightning:layoutItem class="slds-text-align_center">
+						<p class="slds-text-heading_medium slds-text-align_center">Attendance</p>
+						<p class="slds-text-heading_large"><lightning:formattedNumber value="{!v.attendance}" maximumFractionDigits="1"/></p>
+					</lightning:layoutItem>
+					<lightning:layoutItem class="slds-text-align_center">
+							<p class="slds-text-heading_medium">Units Sold</p>
+							<p class="slds-text-heading_large"><lightning:formattedNumber value="{!v.unitSales}" maximumFractionDigits="1"/></p>
+					</lightning:layoutItem>
+					<lightning:layoutItem class="slds-text-align_center">
+							<p class="slds-text-heading_medium">Revenue</p>
+							<p class="slds-text-heading_large">$<lightning:formattedNumber value="{!v.revenue}" maximumFractionDigits="0"/></p>
+					</lightning:layoutItem>
+				</lightning:layout>
+
+
+			</div>
+		</lightning:card>
+
+</aura:component>

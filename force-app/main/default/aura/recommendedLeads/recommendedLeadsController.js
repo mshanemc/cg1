@@ -1,8 +1,9 @@
+/* globals _ */
 ({
     doInit : function(component) {
         var columns=[
             { label: 'First', fieldName: 'FirstName'},
-            { label: 'Last', fieldName: 'Last Name'},
+            { label: 'Last', fieldName: 'LastName'},
             { label: 'Phone', fieldName: 'Phone', type: 'phone'},
             { label: 'Email', fieldName: 'Email', type: 'email'}
         ];
@@ -21,5 +22,11 @@
             }
         });
         $A.enqueueAction(action);
+    },
+
+    shuffle : function(component, event) {
+        if (event.getParam("channel")=='ducatiEventBox' && component.get("v.leads")){
+            component.set("v.leads", _.shuffle(component.get("v.leads")));
+        }
     },
 })

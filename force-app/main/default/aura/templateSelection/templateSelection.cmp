@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+	<aura:attribute name="templates" type="object[]" />
+	<aura:attribute name="columns" type="object[]" />
+
+	<ltng:require scripts="{!$Resource.moment}" afterScriptsLoaded="{!c.doInit}"/>
+
+	<aura:if isTrue="{!v.templates.length>0}">
+		<lightning:card title="Email Templates" iconName="standard:email" variant="base">
+			<aura:set attribute="actions">
+				<lightning:button label="Preview" variant="neutral" />
+				<lightning:button label="Remove" variant="destructive" />
+			</aura:set>
+			<div class="slds-p-horizontal_medium">
+				<!--then put your body here, outside any aura:set-->
+				<lightning:datatable keyField="name" data="{!v.templates}" columns="{!v.columns}"/>
+			</div>
+		</lightning:card>
+	</aura:if>
+
+
+
+</aura:component>

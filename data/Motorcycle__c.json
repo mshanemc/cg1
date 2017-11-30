@@ -1,0 +1,68 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Motorcycle__c",
+                "referenceId": "Motorcycle__cRef1"
+            },
+            "Name": "Hypermotard 939",
+            "ImageURL__c": "https://raw.githubusercontent.com/mshanemc/cg1/master/assets/2017-Ducati-Hypermotard-939d.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Motorcycle__c",
+                "referenceId": "Motorcycle__cRef2"
+            },
+            "Name": "Multistrada 1200 Enduro",
+            "ImageURL__c": "https://raw.githubusercontent.com/mshanemc/cg1/master/assets/ducati-multistrada-1200-enduro.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Motorcycle__c",
+                "referenceId": "Motorcycle__cRef3"
+            },
+            "Name": "Multistrada 1200 S",
+            "ImageURL__c": "https://raw.githubusercontent.com/mshanemc/cg1/master/assets/Ducati-Multistrada1200S-2011.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Motorcycle__c",
+                "referenceId": "Motorcycle__cRef4"
+            },
+            "Name": "1299 Superleggera",
+            "ImageURL__c": "https://raw.githubusercontent.com/mshanemc/cg1/master/assets/ducati-1299-superleggera.png"
+        },
+        {
+            "attributes": {
+                "type": "Motorcycle__c",
+                "referenceId": "Motorcycle__cRef5"
+            },
+            "Name": "Monster 797",
+            "ImageURL__c": "https://raw.githubusercontent.com/mshanemc/cg1/master/assets/v_monster-797.png"
+        },
+        {
+            "attributes": {
+                "type": "Motorcycle__c",
+                "referenceId": "Motorcycle__cRef6"
+            },
+            "Name": "Monster 1200 S",
+            "ImageURL__c": "https://raw.githubusercontent.com/mshanemc/cg1/master/assets/Ducati%20Monster%201200%20S%20Stripe%2015%20%201.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Motorcycle__c",
+                "referenceId": "Motorcycle__cRef7"
+            },
+            "Name": "Diavel",
+            "ImageURL__c": "https://raw.githubusercontent.com/mshanemc/cg1/master/assets/diavel.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Motorcycle__c",
+                "referenceId": "Motorcycle__cRef8"
+            },
+            "Name": "XDiavel",
+            "ImageURL__c": "https://raw.githubusercontent.com/mshanemc/cg1/master/assets/xDiavel.jpg"
+        }
+    ]
+}

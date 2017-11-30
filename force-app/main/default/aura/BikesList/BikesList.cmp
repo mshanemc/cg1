@@ -1,21 +1,24 @@
-<aura:component implements="flexipage:availableForAllPageTypes" controller="DucatiQueries">
+<aura:component implements="flexipage:availableForAllPageTypes" controller="ducatiInspections">
 
 			<aura:attribute name="bikes" type="object[]"/>
-			<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+			<ltng:require scripts="{!$Resource.lodash}" afterScriptsLoaded="{!c.doInit}"/>
+			<aura:handler event="ltng:sendMessage" action="{!c.shuffle}"/>
 
 			<!--icons at https://www.lightningdesignsystem.com/icons/ -->
-			<lightning:card title="Customer's Bikes" iconName="custom:custom98" variant="base">
+			<lightning:card title="Recommended Motorcycles" iconName="custom:custom12" variant="base">
 				<div class="slds-p-horizontal_medium">
 					<!--then put your body here, outside any aura:set-->
-					<aura:iteration items="{!v.bikes}" var="bike">
-						<lighting:layout>
-							<lightning:layoutItem>
-								<img src="{!bike.Bike__r.Image_URL__c}" class="bike_pic"/>
+					<aura:iteration items="{!v.bikes}" var="bike" start="0" end="3">
+
+						<lightning:layout horizontalAlign="space" verticalAlign="center" pullToBoundary="medium">
+							<lightning:layoutItem padding="around-medium" size="4">
+								<img src="{!bike.ImageURL__c}" class="bike_pic"/>
 							</lightning:layoutItem>
-							<lightning:layoutItem>
-								<p class="slds-text-heading_large slds-text-align_center">{!bike.Bike__r.Name}</p>
+							<lightning:layoutItem padding="around-medium" size="8">
+								<p class="slds-text-heading_large slds-text-align_center">{!bike.Name}</p>
 							</lightning:layoutItem>
-						</lighting:layout>
+						</lightning:layout>
 
 
 					</aura:iteration>

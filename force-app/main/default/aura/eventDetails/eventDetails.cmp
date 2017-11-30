@@ -2,51 +2,68 @@
 
 	<aura:attribute name="region" type="string" default=""/>
 	<aura:attribute name="dealers" type="object[]" />
+	<aura:attribute name="showButton" type="boolean" default="false"/>
 
 	<force:recordData aura:id="frd" mode="EDIT" targetFields="{!v.targetFields}" layoutType="FULL" />
 	<aura:attribute name="targetFields" type="Object"/>
 
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 	<!--icons at https://www.lightningdesignsystem.com/icons/ -->
-	<lightning:card title="Event Details" variant="base">
+	<lightning:card title="Event Details" variant="base" iconName="custom:custom13">
 		<aura:set attribute="actions">
-			<!--actions go here, mostly buttons!-->
+			<aura:if isTrue="{!v.showButton}">
+				<lightning:button variant="brand" label="Create Event" onclick="{!c.createEvent}"/>
+			</aura:if>
 		</aura:set>
 		<aura:set attribute="footer">
-			<!--footer markup-->
+		<!--footer markup-->
 		</aura:set>
+
 		<div class="slds-p-horizontal_medium">
-			<lightning:select label="Region" value="{!v.targetFields.Region}">
-				<option value="West">US West</option>
-				<option value="North">US North</option>
-				<option value="South">US South</option>
-				<option value="Northeast">US Northeast</option>
-				<option value="Northeast">Canada East</option>
-				<option value="Northeast">Canada West</option>
+			<div class="slds-p-vertical_small">
+				<lightning:select label="Region" value="{!v.region}" onchange="{!c.shuffle}">
+					<option value="">--Select--</option>
+					<option value="West">US West</option>
+					<option value="North">US North</option>
+					<option value="South">US South</option>
+					<option value="Northeast">US Northeast</option>
+					<option value="Northeast">Canada East</option>
+					<option value="Northeast">Canada West</option>
 			</lightning:select>
+		</div>
 
-			<aura:if isTrue="{!v.targetFields.Region}">
-				<lightning:select label="Region" value="{!v.targetFields.Dealer__c}">
-					<option value="">Select</option>
-					<aura:iteration items="{!v.dealers}" var="dealer">
-						<option value="{!dealer.Id}">{!dealer.Name}</option>
-					</aura:iteration>
-				</lightning:select>
-			</aura:if>
-
-			<lightning:select label="Event Type" value="{!v.Event_Type__c}" >
-				<option value="">Demo Day</option>
-				<option value="">VIP</option>
+		<aura:if isTrue="{!v.region}">
+		<div class="slds-p-vertical_small">
+			<lightning:select label="Dealer" value="{!v.targetFields.Dealer__c}" onchange="{!c.shuffle}">
+				<option value="">--Select--</option>
+				<aura:iteration items="{!v.dealers}" var="dealer">
+					<option value="{!dealer.Id}">{!dealer.Name}</option>
+				</aura:iteration>
 			</lightning:select>
+		</div>
+		</aura:if>
 
-			<lightning:select label="Attendee Segment" value="{!v.targetFields.Attendee_Segment__c}" >
-				<option value="">Ducati Owners</option>
-				<option value="">Non-Ducati Owners</option>
+		<div class="slds-p-vertical_small">
+			<lightning:select label="Event Type" value="{!v.targetFields.Event_Type__c}" onchange="{!c.shuffle}">
+				<option value="">--Select--</option>
+				<option value="Demo Day">Demo Day</option>
+				<option value="VIP">VIP</option>
 			</lightning:select>
+		</div>
 
-			<lightning:input value="{!v.targetFields.Event_Date__c}" type="date" label="Event Date"/>
+		<div class="slds-p-vertical_small">
+			<lightning:select label="Attendee Segment" value="{!v.targetFields.Attendee_Segment__c}" onchange="{!c.shuffle}" >
+				<option value="">--Select--</option>
+				<option value="Current Owners">Current Owners</option>
+				<option value="Prospective Owners">Prospective Owners</option>
+			</lightning:select>
+		</div>
 
-			<!--then put your body here, outside any aura:set-->
+		<div class="slds-p-vertical_small">
+			<lightning:textarea value="{!v.targetFields.Description__c}" label="Description" onchange="{!c.done}"/>
+			<!-- <lightning:input value="{!v.targetFields.Event_Date__c}" type="date" label="Event Date" onchange="{!c.done}"/> -->
+		</div>
+
 		</div>
 	</lightning:card>
 </aura:component>

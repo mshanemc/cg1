@@ -3,21 +3,25 @@
 	<aura:attribute name="leads" type="object[]" />
 	<aura:attribute name="columns" type="object[]" />
 
-	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<ltng:require scripts="{!$Resource.lodash}" afterScriptsLoaded="{!c.doInit}"/>
+	<aura:handler event="ltng:sendMessage" action="{!c.shuffle}"/>
 
-	<lightning:card title="Recommeneded Leads" iconName="standard:lead" variant="base">
-			<aura:set attribute="actions">
-				<lightning:button label="Invite" variant="brand" />
-				<lightning:button label="Remove" variant="destructive" />
-			</aura:set>
-			<aura:set attribute="footer">
-				<a href="">View All</a>
-			</aura:set>
-			<div class="slds-p-horizontal_medium">
-				<!--then put your body here, outside any aura:set-->
-				<lightning:datatable keyField="Id" data="{!v.leads}" columns="{!v.columns}"/>
-			</div>
-		</lightning:card>
+	<aura:if isTrue="{!v.leads.length>0}">
+			<lightning:card title="Recommended Leads" iconName="standard:lead" variant="base">
+				<aura:set attribute="actions">
+					<lightning:button label="Invite" variant="brand" />
+					<lightning:button label="Remove" variant="destructive" />
+				</aura:set>
+				<aura:set attribute="footer">
+					<a href="">View All</a>
+				</aura:set>
+				<div class="slds-p-horizontal_medium">
+					<!--then put your body here, outside any aura:set-->
+					<lightning:datatable keyField="Id" data="{!v.leads}" columns="{!v.columns}"/>
+				</div>
+			</lightning:card>
+	</aura:if>
+
 
 
 </aura:component>

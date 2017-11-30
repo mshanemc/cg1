@@ -1,3 +1,4 @@
+/* globals _ */
 ({
     doInit : function(component) {
         var action = component.get("c.getBikes");
@@ -14,5 +15,11 @@
             }
         });
         $A.enqueueAction(action);
-    }
+    },
+
+    shuffle : function(component, event) {
+        if (event.getParam("channel")=='ducatiEventBox' && component.get("v.bikes")){
+            component.set("v.bikes", _.shuffle(component.get("v.bikes")));
+        }
+    },
 })

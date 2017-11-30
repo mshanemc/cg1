@@ -1,0 +1,94 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef1"
+            },
+            "Name": "Ducati of Mill Valley",
+            "Bikes_Sold__c": 22,
+            "Region__c": "North America"
+        },
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef2"
+            },
+            "Name": "Rincon Bikes",
+            "Bikes_Sold__c": 9,
+            "Region__c": "North America"
+        },
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef3"
+            },
+            "Name": "Fremont Motors",
+            "Bikes_Sold__c": 5,
+            "Region__c": "North America"
+        },
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef4"
+            },
+            "Name": "Castro Motorsports",
+            "Bikes_Sold__c": 11,
+            "Region__c": "North America"
+        },
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef5"
+            },
+            "Name": "Folsom Cycles",
+            "Bikes_Sold__c": 9,
+            "Region__c": "North America"
+        },
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef6"
+            },
+            "Name": "The Motorcycle Co",
+            "Bikes_Sold__c": 7,
+            "Region__c": "North America"
+        },
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef7"
+            },
+            "Name": "Manor Motors",
+            "Bikes_Sold__c": 67,
+            "Region__c": "North America"
+        },
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef8"
+            },
+            "Name": "Power Motorcycles",
+            "Bikes_Sold__c": 31,
+            "Region__c": "North America"
+        },
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef9"
+            },
+            "Name": "Nate’s Speed Shop",
+            "Bikes_Sold__c": 27,
+            "Region__c": "North America"
+        },
+        {
+            "attributes": {
+                "type": "Dealer__c",
+                "referenceId": "Dealer__cRef10"
+            },
+            "Name": "Racer’s Club",
+            "Bikes_Sold__c": 39,
+            "Region__c": "North America"
+        }
+    ]
+}
