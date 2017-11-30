@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <language>en_US</language>
+    <masterLabel>Ducati_Logo_Wallpaper_22377_1000106</masterLabel>
+    <relationships>
+        <organization>
+            <access>VIEWER</access>
+        </organization>
+    </relationships>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>Ducati Logo Wallpaper 22377 10001060 px  fond ecran.jpg</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>
