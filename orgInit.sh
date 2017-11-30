@@ -11,7 +11,7 @@ sfdx force:data:bulk:upsert -f data/Reporting_2__c.csv -s Reporting_2__c -i ID
 # smaller files
 sfdx force:data:tree:import -f data/Account.json
 sfdx force:data:tree:import -f data/Dealer__c.json
-sfdx force:data:tree:import -f data/motorcycle__c.json
+sfdx force:data:tree:import -f data/Motorcycle__c.json
 sfdx force:data:tree:import -f data/Lead.json
 
 # creating a user to chatter to
