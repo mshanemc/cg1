@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sfdx force:org:create -f config/project-scratch-def.json -s -d 1
+sfdx force:org:create -f config/project-scratch-def.json -s -d 4
 sfdx force:source:push
 sfdx force:user:permset:assign -n DucatiEvents
 
