@@ -1,6 +1,7 @@
 {
     "orgName": "DucatiDemo",
     "edition": "Developer",
+    "description": "Ducati extend CRM booth",
     "orgPreferences" : {
         "enabled": ["S1DesktopEnabled"]
     }
