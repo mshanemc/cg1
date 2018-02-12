@@ -4,6 +4,7 @@
     "adminEmail": "platformpmmdemos@gmail.com",
     "description": "Ducati extend CRM booth",
     "orgPreferences" : {
-        "enabled": ["S1DesktopEnabled"]
+        "enabled": ["S1DesktopEnabled"],
+        "disabled": [ "S1EncryptedStoragePref2" ]
     }
 }
