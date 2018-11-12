@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <label>Test Field 2</label>
+    <type>undefined</type>
+    <fullName>Test_Field 2__c</fullName>
+    <required>false</required>
+    <unique>false</unique>
+    <externalId>false</externalId>
+    <description>undefined</description>
+    <inlineHelpText>undefined</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>
