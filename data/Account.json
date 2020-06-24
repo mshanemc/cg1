@@ -7,7 +7,7 @@
             },
             "Name": "Ducati of Mill Valley",
             "Type": "Dealer",
-            "Region__c" : "West"
+            "Region__c": "West"
         },
         {
             "attributes": {
@@ -16,7 +16,7 @@
             },
             "Name": "Rincon Bikes",
             "Type": "Dealer",
-            "Region__c" : "West"
+            "Region__c": "West"
         },
         {
             "attributes": {
@@ -25,7 +25,7 @@
             },
             "Name": "Fremont Motors",
             "Type": "Dealer",
-            "Region__c" : "West"
+            "Region__c": "West"
         },
         {
             "attributes": {
@@ -34,7 +34,7 @@
             },
             "Name": "Castro Motorsports",
             "Type": "Dealer",
-            "Region__c" : "West"
+            "Region__c": "West"
         },
         {
             "attributes": {
@@ -43,7 +43,7 @@
             },
             "Name": "Folsom Cycles",
             "Type": "Dealer",
-            "Region__c" : "West"
+            "Region__c": "West"
         },
         {
             "attributes": {
@@ -52,7 +52,7 @@
             },
             "Name": "The Motorcycle Co",
             "Type": "Dealer",
-            "Region__c" : "West"
+            "Region__c": "West"
         },
         {
             "attributes": {
@@ -61,7 +61,7 @@
             },
             "Name": "Manor Motors",
             "Type": "Dealer",
-            "Region__c" : "West"
+            "Region__c": "West"
         },
         {
             "attributes": {
@@ -70,7 +70,7 @@
             },
             "Name": "Power Motorcycles",
             "Type": "Dealer",
-            "Region__c" : "West"
+            "Region__c": "West"
         },
         {
             "attributes": {
@@ -79,7 +79,7 @@
             },
             "Name": "Nate’s Speed Shop",
             "Type": "Dealer",
-            "Region__c" : "West"
+            "Region__c": "West"
         },
         {
             "attributes": {
